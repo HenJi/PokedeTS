@@ -14,6 +14,4 @@ function App() {
   );
 }
 
-console.dir(PokeType)
-
 export default App;

@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { PokeType, pokeTypes } from 'models'
+import { pokeTypes } from 'models'
 import { TypeDisplay } from './TypeDisplay'
 
 storiesOf('TypeDisplay', module)

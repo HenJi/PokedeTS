@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components/macro'
 
 import { PokeType } from 'models'
-import { Lang } from 'Lang'
+import { Lang } from 'utils/Lang'
 
 interface Props {
   pokeType: PokeType
