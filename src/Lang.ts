@@ -1,0 +1,116 @@
+const colors = {
+  1 : "black",
+  2 : "blue",
+  3 : "brown",
+  4 : "gray",
+  5 : "green",
+  6 : "pink",
+  7 : "purple",
+  8 : "red",
+  9 : "white",
+  10 : "yellow",
+}
+
+const types = {
+  1 : "normal",
+  2 : "fighting",
+  3 : "flying",
+  4 : "poison",
+  5 : "ground",
+  6 : "rock",
+  7 : "bug",
+  8 : "ghost",
+  9 : "steel",
+  10 : "fire",
+  11 : "water",
+  12 : "grass",
+  13 : "electric",
+  14 : "psychic",
+  15 : "ice",
+  16 : "dragon",
+  17 : "dark",
+  18 : "fairy",
+}
+
+const miniTypes = {
+  1 : "nor",
+  2 : "fig",
+  3 : "fly",
+  4 : "poi",
+  5 : "gro",
+  6 : "roc",
+  7 : "bug",
+  8 : "gho",
+  9 : "ste",
+  10 : "fir",
+  11 : "wat",
+  12 : "gra",
+  13 : "ele",
+  14 : "psy",
+  15 : "ice",
+  16 : "dra",
+  17 : "dar",
+  18 : "fai",
+}
+
+const bodies = {
+  1 : "Pokémons consisting of only a head",
+  2 : "Pokémons with serpentine bodies",
+  3 : "Pokémons with fins",
+  4 : "Pokémons consisting of a head and arms",
+  5 : "Pokémons consisting of a head and a base",
+  6 : "Pokémons with a bipedal, tailed form",
+  7 : "Pokémons consisting of a head and legs",
+  8 : "Pokémons with a quadruped body",
+  9 : "Pokémons with a single pair of wings",
+  10 : "Pokémons with tentacles or a multiped body",
+  11 : "Pokémons consisting of multiple bodies",
+  12 : "Pokémons with a bipedal, tailless form",
+  13 : "Pokémons with two or more pairs of wings",
+  14 : "Pokémons with an insectoid body",
+}
+
+export const Lang = {
+  welcome     : "Welcome in the Pokédex",
+  pokedex     : "Pokédex",
+  pokemons    : "Pokémons",
+
+  navhome     : "Home",
+  navrandom   : "Random Pokémon",
+  navstyle    : "Body styles",
+  navtype     : "Pokemon types",
+  search      : "Enter a name",
+
+  writeName   : "Write the name of a Pokémon to start",
+
+  badPokemon  : "Invalid Pokémon page",
+  typepokemn  : " type Pokémons",
+  typeAvg     : " type average stats",
+  ranked      : "Ranked #",
+
+  data        : "Pokémon data",
+  number      : "National n°",
+  type        : "Type",
+  height      : "Height",
+  weigth      : "Weight",
+  generation  : "Generation",
+
+  stats       : "Base stats",
+  hp          : "HP",
+  attack      : "Attack",
+  defense     : "Defense",
+  attackSpe   : "Sp. Atk",
+  defenseSpe  : "Sp. Def",
+  speed       : "Speed",
+  total       : "Total",
+  averages    : "(averages)",
+
+  evolution   : "Evolution chart",
+
+  tweets      : "On Twitter",
+  loading     : "Loading tweets for ",
+  notweets    : "Nobody talks about me :(",
+
+  types, miniTypes,
+  colors, bodies,
+}

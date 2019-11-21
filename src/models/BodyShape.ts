@@ -1,0 +1,16 @@
+export enum BodyShape {
+  Head = 1,
+  Serpentine = 2,
+  Fins = 3,
+  HeadArms = 4,
+  HeadBase = 5,
+  BipedalTail = 6,
+  HeadLegs = 7,
+  Quadruped = 8,
+  SingleWings = 9,
+  TentaclesMultiped = 10,
+  MultipleBodies = 11,
+  BipedalTailless = 12,
+  MultiWings = 13,
+  Insectoid = 14,
+}

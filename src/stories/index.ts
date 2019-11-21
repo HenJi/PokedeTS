@@ -1,2 +1,1 @@
-import '../components/TaskView/TaskView.stories'
-import '../components/Button/Button.stories'
+import '../components/TypeDisplay/TypeDisplay.stories'

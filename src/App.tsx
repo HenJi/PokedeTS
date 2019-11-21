@@ -1,15 +1,19 @@
 import React from 'react';
 import './App.css';
 
-import { Button } from 'components'
+import { PokeType } from 'models'
+import { TypeDisplay } from 'components'
 
 function App() {
   return (
     <div className="App">
-      <Button>Coucou</Button>
+      <TypeDisplay pokeType={ PokeType.Normal } />
+      <TypeDisplay pokeType={ PokeType.Fighting } />
       <img alt="Artwork" src="/artworks/1.png"/>
     </div>
   );
 }
+
+console.dir(PokeType)
 
 export default App;

@@ -1,0 +1,6 @@
+export * from './BodyShape'
+export * from './Color'
+export * from './Infos'
+export * from './Pokemon'
+export * from './PokeType'
+export * from './Stats'
