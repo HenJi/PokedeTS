@@ -20,10 +20,13 @@ const ListWrapper = styled.div`
 `
 
 export const PokeList: React.FunctionComponent<Props> = (props) => {
-  const { pokemons } = props
+  const { pokemons, children } = props
   const content = pokemons.map(p => <MiniPokeDisplay key={ p.name } pokemon={ p } />)
 
   return (
-    <ListWrapper>{ content }</ListWrapper>
+    <ListWrapper>
+      { content }
+      { children }
+    </ListWrapper>
   );
 }

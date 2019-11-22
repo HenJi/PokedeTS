@@ -1,12 +1,11 @@
 import React from 'react';
 
-import { Layout, PokeList } from 'components'
+import { Layout } from 'components'
+import { PokeSearch } from 'views'
 import { allPokemons } from 'data/DataSource'
 
 function App() {
-  const displayed = allPokemons
-    .filter(p => p.infos !== undefined)
-  const content = <PokeList pokemons={ displayed } />
+  const content = <PokeSearch pokemons={ allPokemons } />
   return (
     <Layout>{ content }</Layout>
   );

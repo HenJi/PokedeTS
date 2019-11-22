@@ -81,7 +81,8 @@ export const Lang = {
   navtype     : "Pokemon types",
   search      : "Enter a name",
 
-  writeName   : "Write the name of a Pokémon to start",
+  writeName   : "Write the name of a Pokémon",
+  filterMore  : "Set a filter to see other Pokémons",
 
   badPokemon  : "Invalid Pokémon page",
   typepokemn  : " type Pokémons",
