@@ -1,22 +1,14 @@
 import React from 'react';
-import './App.css';
 
-import { TypeDisplay } from 'components'
-import { Pokemon } from 'models'
+import { Layout, MiniPokeDisplay } from 'components'
 import { allPokemons } from 'data/DataSource'
 
-const PokeDisplay = ({ pokemon }: { pokemon: Pokemon }) => (
-  <div>
-    <TypeDisplay pokeType={ pokemon.type1 } />
-    { pokemon.type2 && <TypeDisplay pokeType={ pokemon.type2 } /> }
-  </div>
-)
-
 function App() {
+  const content = allPokemons
+    .filter(p => p.infos !== undefined)
+    .map(p => <MiniPokeDisplay key={ p.name } pokemon={ p } />)
   return (
-    <div className="App">
-      { allPokemons.map(p => <PokeDisplay key={ p.name } pokemon={ p } />) }
-    </div>
+    <Layout>{ content }</Layout>
   );
 }
 

@@ -51,7 +51,6 @@ const tagStyle = `
   display: inline-block;
   border-width: 1px;
   border-style: solid;
-  margin-right: 5px;
 `
 
 const InnerTypeDisplay = styled.span`
@@ -64,7 +63,7 @@ const InnerTypeDisplay = styled.span`
     color: ${(props: StyleProps) => props.hover ? props.color3 : undefined }
   }
 `
-export function TypeDisplay(props: Props) {
+export const TypeDisplay: React.FunctionComponent<Props> = (props) => {
   const { pokeType, mini = false, hover = false } = props
   const [ color1, color2, color3 ] = typeColors[pokeType]
   const text = mini ? Lang.miniTypes[pokeType] : Lang.types[pokeType]
