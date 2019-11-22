@@ -10,7 +10,7 @@ export interface Pokemon {
   weight: number
   order: number
   type1: PokeType
-  type2: PokeType
+  type2?: PokeType
   stats: Stats
   infos?: Infos // Only for base forms
 }

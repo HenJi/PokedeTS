@@ -1,15 +1,21 @@
 import React from 'react';
 import './App.css';
 
-import { PokeType } from 'models'
 import { TypeDisplay } from 'components'
+import { Pokemon } from 'models'
+import { allPokemons } from 'data/DataSource'
+
+const PokeDisplay = ({ pokemon }: { pokemon: Pokemon }) => (
+  <div>
+    <TypeDisplay pokeType={ pokemon.type1 } />
+    { pokemon.type2 && <TypeDisplay pokeType={ pokemon.type2 } /> }
+  </div>
+)
 
 function App() {
   return (
     <div className="App">
-      <TypeDisplay pokeType={ PokeType.Normal } />
-      <TypeDisplay pokeType={ PokeType.Fighting } />
-      <img alt="Artwork" src="/artworks/1.png"/>
+      { allPokemons.map(p => <PokeDisplay key={ p.name } pokemon={ p } />) }
     </div>
   );
 }
