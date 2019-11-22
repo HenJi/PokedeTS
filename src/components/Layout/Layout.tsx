@@ -8,6 +8,8 @@ interface Props {
 const GlobalStyle = createGlobalStyle`
   body {
     background-color: wheat;
+    font-family: Arial;
+    font-size: 16px;
   }
 `
 

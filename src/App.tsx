@@ -7,7 +7,7 @@ import { allPokemons } from 'data/DataSource'
 function App() {
   const content = (
     <>
-      <PokeDetail pokemon={ allPokemons[0] } />
+      <PokeDetail pokemon={ allPokemons[Math.floor(Math.random()*720)] } />
       <PokeSearch pokemons={ allPokemons } />
     </>
   )

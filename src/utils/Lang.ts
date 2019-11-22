@@ -91,9 +91,10 @@ export const Lang = {
 
   data        : "Pokémon data",
   number      : "National n°",
-  type        : "Type",
+  pokeType    : "Type",
+  pokeTypes   : "Types",
   height      : "Height",
-  weigth      : "Weight",
+  weight      : "Weight",
   generation  : "Generation",
 
   stats       : "Base stats",
