@@ -2,14 +2,12 @@ import React from 'react'
 import styled from 'styled-components/macro'
 
 import { Lang } from 'utils/Lang'
-import { Pokemon } from 'models'
 import { PokeList } from 'components'
+import { allPokemons } from 'data/DataSource'
 
 const MAX_VISIBLE = 50
 
-interface Props {
-  pokemons: Pokemon[]
-}
+type Props = {}
 
 const InputWrapper = styled.div`
   margin-bottom: 10px;
@@ -39,10 +37,9 @@ const MoreCell = styled.div`
 `
 
 export const PokeSearch: React.FunctionComponent<Props> = (props) => {
-  const { pokemons } = props
   const [search, setSearch] = React.useState('')
 
-  const valid = pokemons.filter(p => p.infos !== undefined)
+  const valid = allPokemons.filter(p => p.infos !== undefined)
   const filtered = search === '' ? valid : valid.filter(p => p.name.indexOf(search) >= 0)
   const hasMore = filtered.length > MAX_VISIBLE
   const handleChange = (ev: React.FormEvent<HTMLInputElement>) => {

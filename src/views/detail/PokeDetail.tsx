@@ -1,14 +1,13 @@
 import React from 'react'
 import styled from 'styled-components/macro'
+import { RouteComponentProps } from 'react-router-dom'
 
-import { Pokemon } from 'models'
 import { TypeDisplay } from 'components'
 import { capitalize } from 'utils'
 import { Lang } from 'utils/Lang'
+import { allPokemons } from 'data/DataSource'
 
-interface Props {
-  pokemon: Pokemon
-}
+type Props = RouteComponentProps<{ id: string }>
 
 const DetailWrapper = styled.div`
   display: flex;
@@ -55,12 +54,17 @@ const InfoTypes = styled.div`
 `
 
 export const PokeDetail: React.FunctionComponent<Props> = (props) => {
-  const { pokemon } = props
-  const { id, name, type1, type2 } = pokemon
+  const { id } = props.match.params
+  const pokemon = allPokemons.find(p => `${p.id}` === id || p.name === id)
+  if (pokemon === undefined) {
+    return <div>{ Lang.badPokemon }</div>
+  }
+
+  const { name, type1, type2 } = pokemon
 
   return (
     <DetailWrapper>
-      <img alt={ name } src={ `/artworks/${id}.png` } />
+      <img alt={ name } src={ `/artworks/${pokemon.id}.png` } />
       <InfosWrapper>
         <InfoTitle>{ capitalize(name) }</InfoTitle>
         <table><tbody>

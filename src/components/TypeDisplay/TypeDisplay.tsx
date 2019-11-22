@@ -11,7 +11,7 @@ interface Props {
 }
 
 type TypeColor = [ string, string, string ]
-const typeColors: { [key: string]: TypeColor } = {
+const typeColors: { [key in PokeType]: TypeColor } = {
   [PokeType.Normal]: ['#a8a878', '#8a8a59', '#79794e'],
   [PokeType.Fire]: ['#f08030', '#dd6610', '#b4530d'],
   [PokeType.Water]: ['#6890f0', '#386ceb', '#1753e3'],
@@ -34,7 +34,7 @@ const typeColors: { [key: string]: TypeColor } = {
 
 interface StyleProps {
   color1: string
-  color2: string
+  color2: string 
   color3: string
   hover: boolean
   mini: boolean

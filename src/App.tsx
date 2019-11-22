@@ -1,18 +1,20 @@
-import React from 'react';
+import React from 'react'
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
 
 import { Layout } from 'components'
 import { PokeSearch, PokeDetail } from 'views'
-import { allPokemons } from 'data/DataSource'
 
 function App() {
   const content = (
-    <>
-      <PokeDetail pokemon={ allPokemons[Math.floor(Math.random()*720)] } />
-      <PokeSearch pokemons={ allPokemons } />
-    </>
+    <Switch>
+      <Route exact path="/pokemon/:id" component={ PokeDetail } />
+      <Route path="/" component={ PokeSearch } />
+    </Switch>
   )
   return (
-    <Layout>{ content }</Layout>
+    <Router>
+      <Layout>{ content }</Layout>
+    </Router>
   );
 }
 
