@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
 const AppWrapper = styled.div`
   max-width: 1000px;
   margin: auto;
+  padding: 20px 40px;
   background-color: white;
   border-left: 10px solid wheat;
   border-right: 10px solid wheat;

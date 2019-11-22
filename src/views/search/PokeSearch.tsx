@@ -12,7 +12,7 @@ interface Props {
 }
 
 const InputWrapper = styled.div`
-  padding: 20px 40px;
+  margin-bottom: 10px;
   display: flex;
 
   input {
@@ -27,7 +27,7 @@ const InputWrapper = styled.div`
   }
 `
 
-const MoreWrapper = styled.div`
+const MoreCell = styled.div`
   width: 100px;
   border: 1px solid black;
   border-radius: 4px;
@@ -58,7 +58,7 @@ export const PokeSearch: React.FunctionComponent<Props> = (props) => {
           placeholder={ Lang.writeName } />
       </InputWrapper>
       <PokeList pokemons={ filtered.slice(0, MAX_VISIBLE) }>
-        { hasMore && <MoreWrapper>{ Lang.filterMore }</MoreWrapper>}
+        { hasMore && <MoreCell>{ Lang.filterMore }</MoreCell>}
       </PokeList>
     </>
   );

@@ -28,6 +28,10 @@ const MiniWrapper = styled.div`
 const MiniTypes = styled.div`
   display: flex;
   justify-content: space-evenly;
+
+  > * {
+    margin: 0 3px;
+  }
 `
 
 const MiniName = styled.div`

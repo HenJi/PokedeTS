@@ -43,7 +43,7 @@ interface StyleProps {
 const tagStyle = `
   text-transform: uppercase;
   border-radius: 4px;
-  padding: 2px;
+  padding: 2px 4px;
   text-align: center;
   color: #fff;
   font-size: 10px;
