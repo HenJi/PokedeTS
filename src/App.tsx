@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Layout, MiniPokeDisplay } from 'components'
+import { Layout, PokeList } from 'components'
 import { allPokemons } from 'data/DataSource'
 
 function App() {
-  const content = allPokemons
+  const displayed = allPokemons
     .filter(p => p.infos !== undefined)
-    .map(p => <MiniPokeDisplay key={ p.name } pokemon={ p } />)
+  const content = <PokeList pokemons={ displayed } />
   return (
     <Layout>{ content }</Layout>
   );

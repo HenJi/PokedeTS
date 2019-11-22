@@ -10,6 +10,10 @@ interface Props {
 }
 
 const MiniWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   width: 100px;
   border: 1px solid black;
   border-radius: 4px;
@@ -17,6 +21,7 @@ const MiniWrapper = styled.div`
 
   img {
     width: 80px;
+    margin: auto;
   }
 `
 

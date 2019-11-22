@@ -15,6 +15,8 @@ const AppWrapper = styled.div`
   max-width: 1000px;
   margin: auto;
   background-color: white;
+  border-left: 10px solid wheat;
+  border-right: 10px solid wheat;
 `
 
 export const Layout: React.FunctionComponent = (props) => {
